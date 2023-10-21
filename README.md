@@ -16,6 +16,7 @@ classDiagram
   }
 
   class Books{
+    -id: Number
     -title: String
     -publication_year: Number
     -category: String
