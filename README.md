@@ -2,26 +2,26 @@
 
 ```mermaid
 classDiagram
-  class Client {
+  class User {
     -id: Number
     -name: String
-    -account_number: Number
-    -card_number: Number
+    -book: Book
+    -film: Film
   } 
-
-  class Account {
-    -account_number: number
-    -client_name: String
-    -payment_method: String
-  }
-
-  class Books{
-    -id: Number
+  class Book{
     -title: String
-    -publication_year: Number
     -category: String
+    -author: String
+    -publicationYear: String
+  }
+   class Film{
+    -title: String
+    -category: String
+    -author: String
+    -publicationYear: String
   }
 
-  Client "1" *-- "1" Account
-  Client "1" -- "*" Books
+
+  User "*" *-- "*" Film
+  User "*" -- "*" Book
 ```
